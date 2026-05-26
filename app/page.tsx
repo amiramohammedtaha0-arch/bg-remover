@@ -120,7 +120,6 @@ export default function Home() {
       const enhancedBlob = await preprocessImage(imageFile);
 
       setProgress("Analyzing objects and isolating foreground...");
-      // تم حذف alphaMatting من هنا لحل خطأ الـ Build
       const blob = await imglyRemoveBackground.removeBackground(enhancedBlob, {
         model: "isnet",
         progress: (key: string, current: number, total: number) => {
@@ -156,7 +155,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-4 md:p-8">
-      {/* ... باقي هيكل الصفحة كما هو ... */}
       <header className="flex flex-col items-center text-center mt-10 mb-12">
         <span className="px-3 py-1 text-xs font-semibold tracking-wider text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 rounded-full mb-3">
           AI Background Removal • Fully Local
@@ -166,11 +164,10 @@ export default function Home() {
         </h1>
         <p className="text-slate-400 max-w-2xl text-lg leading-relaxed">
           Professional AI background removal, right in your browser. 
-        <br />
-        Fast, private, and 100% free. 
-        <br />
-        Get clean, transparent results in seconds—without ever uploading your photos.
-          
+          <br />
+          Fast, private, and 100% free. 
+          <br />
+          Get clean, transparent results in seconds—without ever uploading your photos.
         </p>
       </header>
 
@@ -237,6 +234,27 @@ export default function Home() {
           )}
         </div>
       </main>
+
+      <section className="max-w-4xl mx-auto mt-16 p-8 bg-slate-900/50 rounded-2xl border border-slate-800 text-slate-400 text-center">
+        <h2 className="text-2xl font-bold text-white mb-4">How Our AI Background Remover Works</h2>
+        <p className="mb-4 leading-relaxed">
+          Our tool utilizes state-of-the-art machine learning models to identify and extract foreground subjects from images with pixel-perfect accuracy. 
+          By processing all data locally in your browser, we ensure that your photos remain private, secure, and are never uploaded to any external servers.
+        </p>
+        <p className="leading-relaxed">
+          Whether you need to polish product photos for e-commerce, create professional portraits, or design complex graphics, our AI handles the heavy lifting instantly. 
+          Experience professional-grade results with complete data privacy and zero hassle.
+        </p>
+      </section>
+
+      <footer className="mt-20 py-10 text-center text-slate-500 text-sm border-t border-slate-800">
+        <div className="flex gap-6 justify-center">
+          <a href="/about" className="hover:text-indigo-400 transition">About</a>
+          <a href="/privacy" className="hover:text-indigo-400 transition">Privacy Policy</a>
+          <a href="/terms" className="hover:text-indigo-400 transition">Terms of Service</a>
+        </div>
+        <p className="mt-4">© {new Date().getFullYear()} AI Background Remover. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
