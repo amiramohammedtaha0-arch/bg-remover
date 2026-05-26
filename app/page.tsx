@@ -165,9 +165,12 @@ export default function Home() {
           Smart Background Remover
         </h1>
         <p className="text-slate-400 max-w-2xl text-lg leading-relaxed">
-          Remove backgrounds from products, electronics, portraits, transparent
-          objects, and complex scenes directly inside your browser with
-          AI-powered edge detection.
+          Professional AI background removal, right in your browser. 
+        <br />
+        Fast, private, and 100% free. 
+        <br />
+        Get clean, transparent results in seconds—without ever uploading your photos.
+          
         </p>
       </header>
 
