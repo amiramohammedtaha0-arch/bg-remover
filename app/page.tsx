@@ -9,8 +9,8 @@ import {
   ImageIcon,
   Loader2,
 } from "lucide-react";
-import NativeBanner from "./NativeBanner";
 
+// مكون الخلفية الشطرنجية لعرض الصور الشفافة
 const CheckeredBackground = ({
   children,
   theme,
@@ -163,19 +163,13 @@ export default function Home() {
           Smart Background Remover
         </h1>
         <p className="text-slate-400 max-w-2xl text-lg leading-relaxed">
-          Professional AI background removal, right in your browser. 
+          Professional AI background removal, right in your browser.
           <br />
-          Fast, private, and 100% free. 
-          <br />
-          Get clean, transparent results in seconds—without ever uploading your photos.
+          Fast, private, and 100% free.
         </p>
       </header>
 
       <main className="max-w-6xl mx-auto px-4 pb-24">
-        <div className="flex justify-center my-6">
-           <NativeBanner />
-        </div>
-        
         <div className="bg-slate-900/80 backdrop-blur border border-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col items-center gap-8">
           {!image && (
             <label className="w-full max-w-3xl aspect-[16/9] border-2 border-dashed border-slate-700 hover:border-indigo-500 bg-slate-950 hover:bg-black rounded-3xl flex flex-col items-center justify-center p-6 text-center cursor-pointer transition-all duration-300 group">
@@ -236,18 +230,16 @@ export default function Home() {
               </div>
             </div>
           )}
+
+          {/* مكان إعلان الـ Native Banner */}
+          <div id="container-6af2b6818f392ef46f8642bca45bee94" className="min-h-[100px] w-full mt-8 flex justify-center border-t border-slate-800 pt-8"></div>
         </div>
       </main>
 
       <section className="max-w-4xl mx-auto mt-16 p-8 bg-slate-900/50 rounded-2xl border border-slate-800 text-slate-400 text-center">
         <h2 className="text-2xl font-bold text-white mb-4">How Our AI Background Remover Works</h2>
         <p className="mb-4 leading-relaxed">
-          Our tool utilizes state-of-the-art machine learning models to identify and extract foreground subjects from images with pixel-perfect accuracy. 
-          By processing all data locally in your browser, we ensure that your photos remain private, secure, and are never uploaded to any external servers.
-        </p>
-        <p className="leading-relaxed">
-          Whether you need to polish product photos for e-commerce, create professional portraits, or design complex graphics, our AI handles the heavy lifting instantly. 
-          Experience professional-grade results with complete data privacy and zero hassle.
+          Our tool utilizes state-of-the-art machine learning models to identify and extract foreground subjects from images with pixel-perfect accuracy.
         </p>
       </section>
 
@@ -255,7 +247,6 @@ export default function Home() {
         <div className="flex gap-6 justify-center">
           <a href="/about" className="hover:text-indigo-400 transition">About</a>
           <a href="/privacy" className="hover:text-indigo-400 transition">Privacy Policy</a>
-          <a href="/terms" className="hover:text-indigo-400 transition">Terms of Service</a>
         </div>
         <p className="mt-4">© {new Date().getFullYear()} AI Background Remover. All rights reserved.</p>
       </footer>

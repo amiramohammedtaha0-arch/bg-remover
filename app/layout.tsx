@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script"; // 1. استيراد مكون Script
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script"; // قمنا باستيراد مكتبة السكريبت
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,11 +32,18 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
         {children}
-        <Analytics />
         
-        {/* 2. إضافة كود إعلان Adsterra */}
+        <Analytics />
+
+        {/* 1. كود الـ Popunder (يعمل في الخلفية بمجرد تحميل الموقع) */}
         <Script
-          src="https://pl29563027.effectivecpmnetwork.com/6b/f9/c3/6bf9c3171cdda546f82cf09e8da8087f.js"
+          src="https://pl29563027.effectivecpmnetwork.com/6bf9c3171cdda546f82cf09e8da8087f.js"
+          strategy="afterInteractive"
+        />
+
+        {/* 2. كود الـ Native Banner (المحرك الخاص به) */}
+        <Script
+          src="https://pl29563026.effectivecpmnetwork.com/6af2b6818f392ef46f8642bca45bee94/invoke.js"
           strategy="afterInteractive"
         />
       </body>
