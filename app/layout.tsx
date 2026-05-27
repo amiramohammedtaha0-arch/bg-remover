@@ -31,12 +31,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* تم تصحيح الكود هنا: استبدال وسم script العادي بمكون Script الخاص بـ Next.js */}
+        {/* تم تغيير الاستراتيجية إلى beforeInteractive ليتم تحميل السكربت فوراً */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2131755999804092"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
       </head>
       <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
