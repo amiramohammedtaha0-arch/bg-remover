@@ -9,8 +9,8 @@ import {
   ImageIcon,
   Loader2,
 } from "lucide-react";
+import NativeBanner from "./NativeBanner";
 
-// مكون الخلفية الشطرنجية لعرض الصور الشفافة
 const CheckeredBackground = ({
   children,
   theme,
@@ -172,6 +172,10 @@ export default function Home() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 pb-24">
+        <div className="flex justify-center my-6">
+           <NativeBanner />
+        </div>
+        
         <div className="bg-slate-900/80 backdrop-blur border border-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl flex flex-col items-center gap-8">
           {!image && (
             <label className="w-full max-w-3xl aspect-[16/9] border-2 border-dashed border-slate-700 hover:border-indigo-500 bg-slate-950 hover:bg-black rounded-3xl flex flex-col items-center justify-center p-6 text-center cursor-pointer transition-all duration-300 group">

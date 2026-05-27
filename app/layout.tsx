@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import Script from "next/script"; // 1. استيراد مكون Script
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -30,18 +30,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        {/* تم تغيير الاستراتيجية إلى beforeInteractive ليتم تحميل السكربت فوراً */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2131755999804092"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
         {children}
         <Analytics />
+        
+        {/* 2. إضافة كود إعلان Adsterra */}
+        <Script
+          src="https://pl29563027.effectivecpmnetwork.com/6b/f9/c3/6bf9c3171cdda546f82cf09e8da8087f.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
