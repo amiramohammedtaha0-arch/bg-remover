@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script"; // قمنا باستيراد مكتبة السكريبت
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,15 +35,17 @@ export default function RootLayout({
         
         <Analytics />
 
-        {/* 1. كود الـ Popunder (يعمل في الخلفية بمجرد تحميل الموقع) */}
+        {/* 1. كود الـ Popunder الجديد */}
         <Script
-          src="https://pl29563027.effectivecpmnetwork.com/6bf9c3171cdda546f82cf09e8da8087f.js"
+          src="https://downconvenientmagnetic.com/6bf9c3171cdda546f82cf09e8da8087f.js"
           strategy="afterInteractive"
         />
 
-        {/* 2. كود الـ Native Banner (المحرك الخاص به) */}
+        {/* 2. كود الـ Native Banner الجديد */}
         <Script
-          src="https://pl29563026.effectivecpmnetwork.com/6af2b6818f392ef46f8642bca45bee94/invoke.js"
+          async
+          data-cfasync="false"
+          src="https://downconvenientmagnetic.com/6af2b6818f392ef46f8642bca45bee94/invoke.js"
           strategy="afterInteractive"
         />
       </body>

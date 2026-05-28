@@ -230,10 +230,11 @@ export default function Home() {
               </div>
             </div>
           )}
+          <div className="w-full mt-8 flex justify-center border-t border-slate-800 pt-8">
+            <div id="container-6af2b6818f392ef46f8642bca45bee94"></div>
+          </div>
 
-          {/* مكان إعلان الـ Native Banner */}
-          <div id="container-6af2b6818f392ef46f8642bca45bee94" className="min-h-[100px] w-full mt-8 flex justify-center border-t border-slate-800 pt-8"></div>
-        </div>
+
       </main>
 
       <section className="max-w-4xl mx-auto mt-16 p-8 bg-slate-900/50 rounded-2xl border border-slate-800 text-slate-400 text-center">
