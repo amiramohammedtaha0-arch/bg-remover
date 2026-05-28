@@ -233,6 +233,7 @@ export default function Home() {
           <div className="w-full mt-8 flex justify-center border-t border-slate-800 pt-8">
             <div id="container-6af2b6818f392ef46f8642bca45bee94"></div>
           </div>
+          </div>
 
 
       </main>
